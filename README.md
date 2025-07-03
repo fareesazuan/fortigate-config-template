@@ -13,7 +13,7 @@ This repository contains common FortiGate configuration templates for real-world
 
 ---
 
-## 📂 Example: SSL VPN Configuration
+## 📂 Example: SSL VPN Configuration 
 
 ```bash
 config vpn ssl settings
@@ -23,16 +23,3 @@ config vpn ssl settings
 end
 
 
-## 📂 Example: IPsec Site-to-Site VPN Configuration
-
-This template configures a basic IKEv2 site-to-site VPN between two FortiGate firewalls.
-
-```bash
-config vpn ipsec phase1-interface
-    edit "BranchTunnel"
-        set remote-gw 203.0.113.1
-        set psksecret yourPreSharedKey
-
----
-🖼️ Diagram: ipsec-vpn/ipsec-topology.png
-📄 Full config: ipsec-vpn/config.txt
