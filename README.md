@@ -21,3 +21,17 @@ config vpn ssl settings
     set tunnel-ip-pools "SSLVPN_TUNNEL_ADDR1"
     set dns-suffix "mycompany.local"
 end
+
+
+## 📂 Example: IPsec Site-to-Site VPN Configuration
+
+This template configures a basic IKEv2 site-to-site VPN between two FortiGate firewalls.
+
+```bash
+config vpn ipsec phase1-interface
+    edit "BranchTunnel"
+        set remote-gw 203.0.113.1
+        set psksecret yourPreSharedKey
+
+🖼️ Diagram: ipsec-vpn/ipsec-topology.png
+📄 Full config: ipsec-vpn/config.txt
