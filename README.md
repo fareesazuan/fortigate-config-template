@@ -21,5 +21,3 @@ config vpn ssl settings
     set tunnel-ip-pools "SSLVPN_TUNNEL_ADDR1"
     set dns-suffix "mycompany.local"
 end
-
-
