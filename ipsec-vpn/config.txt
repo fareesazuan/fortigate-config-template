@@ -1,0 +1,22 @@
+config vpn ipsec phase1-interface
+    edit "BranchTunnel"
+        set interface "wan1"
+        set ike-version 2
+        set peertype any
+        set net-device disable
+        set proposal aes256-sha256
+        set dhgrp 14
+        set remote-gw 203.0.113.1
+        set psksecret yourPreSharedKey
+    next
+end
+
+config vpn ipsec phase2-interface
+    edit "BranchPhase2"
+        set phase1name "BranchTunnel"
+        set proposal aes256-sha256
+        set pfs disable
+        set dst-subnet 192.168.2.0 255.255.255.0
+        set src-subnet 192.168.1.0 255.255.255.0
+    next
+end
