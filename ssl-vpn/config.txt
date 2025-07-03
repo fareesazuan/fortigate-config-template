@@ -1,0 +1,11 @@
+config vpn ssl settings
+    set servercert "Fortinet_SSL"
+    set tunnel-ip-pools "SSLVPN_TUNNEL_ADDR1"
+    set dns-suffix "mycompany.local"
+end
+
+config firewall address
+    edit "SSLVPN_TUNNEL_ADDR1"
+    set subnet 10.10.10.0 255.255.255.0
+    next
+end
