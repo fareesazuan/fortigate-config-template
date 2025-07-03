@@ -33,5 +33,6 @@ config vpn ipsec phase1-interface
         set remote-gw 203.0.113.1
         set psksecret yourPreSharedKey
 
+---
 🖼️ Diagram: ipsec-vpn/ipsec-topology.png
 📄 Full config: ipsec-vpn/config.txt
